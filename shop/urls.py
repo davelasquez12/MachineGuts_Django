@@ -13,4 +13,7 @@ urlpatterns = [
 
     # 127.0.0.1:8000/store/
     url(r'^store/$', views.store, name='store'),
+
+    # 127.0.0.1:8000/cart/
+    url(r'^cart/$', views.cart, name='cart'),
 ]

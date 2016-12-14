@@ -14,3 +14,10 @@ def register(request):
 
 def store(request):
     return render(request, 'shop/store.html')
+
+
+def cart(request):
+    return render(request, 'shop/cart.html')
+
+
+
