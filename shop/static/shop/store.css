@@ -9,23 +9,12 @@
 	margin-top: 50px;
 }
 
-/* Add a gray background color and some padding to the footer */
-footer {
-  background-color: #f2f2f2;
-  padding: 25px;
-}
 
 .glyphicon.glyphicon-wrench {
     font-size: 20px;
     color: white;
 }
 
- /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-.navbar {
-  border-radius: 0;
-    background-color: #2c3e50;
-    margin: 0;
-}
 
 /* Add a gray background color and some padding to the footer */
 footer {
@@ -37,11 +26,6 @@ footer {
     color: white;
     background-color: #27ae60;
     margin: 0px;
-    
-}
-
-
-.row {
     
 }
 
@@ -67,4 +51,10 @@ ul {
 .glyphicon.glyphicon-wrench {
     font-size: 20px;
     color: white;
+}
+
+.scroll {
+    height:600px;
+    width: 100%;
+    overflow: scroll;
 }
