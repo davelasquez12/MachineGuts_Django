@@ -7,10 +7,76 @@
 {% block body %}
 <!--header-->
 <div class="jumbotron">
-  <h1>Machine Guts</h1>
+  <p id="site-title">Machine Guts </p>
   <h4>Your  First And last stop for all your computer needs</h4>
 </div>
-    <p>To be filled later with more content...</p>
+
+{#    carousel #}
+
+    <div id="slidingtext">
+        <h2 id="carouseltitle">What our customers say</h2>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+            <h4>"This company is the best. Way better than Amazon.com and the Devs are cute too!"<br><span style="font-style:normal;"> Elrich Bachman, Majority Investor, Pied Piper</span></h4>
+            </div>
+            <div class="item">
+              <h4>"Their back end code is not total crap..."<br><span style="font-style:normal;">Bertman Gilfoyle, Senior Systems Analyst, Pied Piper</span></h4>
+            </div>
+            <div class="item">
+              <h4>"Does this gold chain make me look douchey?!"<br><span style="font-style:normal;">Dinesh Chugtai, Senior Programmer, Pied Piper</span></h4>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+
+
+    <!-- Set height and width with CSS -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(26.306042, -98.174801);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 <footer class="container-fluid text-center footer">
   <p>Online Store Copyright</p>  
