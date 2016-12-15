@@ -100,7 +100,8 @@ def store(request):
 
 
 def cart(request):
-    return render(request, 'shop/cart.html')
+    items = Item.objects.filter(sale=True)
+    return render(request, 'shop/cart.html', {'items': items})
 
 def deals(request):
     items = Item.objects.filter(sale=True)

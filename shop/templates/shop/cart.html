@@ -9,140 +9,142 @@
     <div class="container holder">
 
         <div class="container cart">
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
+            {% for item in items %}
+                <div class="row row-cart">
+                    <div class="col-sm-2">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ item.img_url }}">
+                        </div>
+                    </div>
+                    <div class="col-sm-4 va">{{ item.name }}</div>
+                    <div class="col-sm-1 va"> ${{ item.price }}</div>
+                    <div class="col-sm-2 va">Free Delivery</div>
+                    <div class="col-sm-1 va">${{ item.price|add:"-15" }}</div>
+                    <div class="col-sm-2 va">
+                        <button class="btn btn-danger btn-block">Remove</button>
                     </div>
                 </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
+            {% endfor %}
 
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
-
-            <div class="row row-cart">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">
-                    </div>
-                </div>
-                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>
-                <div class="col-sm-1 va"> $100.99</div>
-                <div class="col-sm-2 va">Free Delivery</div>
-                <div class="col-sm-1 va">Sub Total</div>
-                <div class="col-sm-2 va">
-                    <button class="btn btn-danger btn-block">Remove</button>
-                </div>
-            </div>
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="row row-cart">#}
+{#                <div class="col-sm-2">#}
+{#                    <div class="card">#}
+{#                        <img class="card-img-top" src="http://s3.amazonaws.com/etntmedia/media/images/ext/842849976/greasy-fast-food.jpg">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-sm-4 va">Asus MSSDF29993 17 inch</div>#}
+{#                <div class="col-sm-1 va"> $100.99</div>#}
+{#                <div class="col-sm-2 va">Free Delivery</div>#}
+{#                <div class="col-sm-1 va">Sub Total</div>#}
+{#                <div class="col-sm-2 va">#}
+{#                    <button class="btn btn-danger btn-block">Remove</button>#}
+{#                </div>#}
+{#            </div>#}
         </div>
 
         <div class="button-wrapper">
