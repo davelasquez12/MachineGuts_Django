@@ -19,4 +19,8 @@ urlpatterns = [
 
     # 127.0.0.1:8000/cart/
     url(r'^deals/$', views.deals, name='deals'),
+
+    url(r'login/$', views.login_user, name='login_user'),
+
+    url(r'^logout/$', views.logout_user, name='logout_user')
 ]

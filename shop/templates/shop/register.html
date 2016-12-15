@@ -66,27 +66,54 @@
 
     <div class="container contain">
         <div id="title">Register Here</div>
-        <form>
-           <div class="form-group">
+        <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% comment %}<p>{{ errors.fuckthis }} </p>{% endcomment %}
+            <div class="form-group">
+                {% if errors.username_error %}
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <span class="text-danger small">{{ errors.username_error }}</span>
+                    </div>
+                {% endif %}
                 <label for="pwd">Username:</label>
-                <input type="username" class="form-control" id="username">
+                <input type="text" class="form-control" id="username" name="username" value="{{ data.username }}">
             </div>
             <div class="form-group">
+                {% if errors.email_error %}
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <span class="text-danger small">{{ errors.email_error }}</span>
+                    </div>
+                {% endif %}
                 <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="email" value="{{ data.email }}">
             </div>
 
             <div class="form-group">
+                {% if errors.email_confirm_error %}
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <span class="text-danger small">{{ errors.email_confirm_error }}</span>
+                    </div>
+                {% endif %}
                 <label for="email">Confirm Email address:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="email_confirm" value="{{ data.email_confirm }}">
             </div>
             <div class="form-group">
+                {% if errors.password_error %}
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <span class="text-danger small">{{ errors.password_error }}</span>
+                    </div>
+                {% endif %}
                 <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd">
+                <input type="password" class="form-control" id="pwd" name="password">
             </div>
             <div class="form-group">
+                {% if errors.password_confirm_error %}
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <span class="text-danger small">{{ errors.password_confirm_error }}</span>
+                    </div>
+                {% endif %}
                 <label for="pwd">Confirm Password:</label>
-                <input type="password" class="form-control" id="pwd">
+                <input type="password" class="form-control" id="pwd" name="password_confirm">
             </div>
             <div class="button-wrapper">
                 <button type="submit" class="btn btn-success btn-lg btn-block">Register</button>

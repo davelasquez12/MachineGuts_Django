@@ -41,8 +41,23 @@ white: #bdc3c7
                     <li><a href="{% url 'shop:deals' %}">Deals</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                    <li>
+                        <a href="#">
+                        <span class="glyphicon glyphicon-user"></span>
+                        {% if user.is_authenticated %}
+                            Hello {{ user.username }}!
+                        {% else %}
+                            Hello Guest!
+                        {% endif %}
+                    </a></li>
+                    <li>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'shop:logout_user' %}"><span class="glyphicon glyphicon-user"></span> Logout</a>
+                        {% else %}
+                            <a href="#" data-toggle="modal" data-target="#login-modal">
+                            <span class="glyphicon glyphicon-user"></span> Login</a>
+                        {% endif %}
+                    </li>
                     <li><a href="{% url 'shop:cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                 </ul>
             </div>
@@ -54,10 +69,16 @@ white: #bdc3c7
         <div class="modal-dialog">
             <div class="loginmodal-container">
                 <h1 id="loginheader">Login to Your Account</h1><br>
-                <form>
-                    <input type="text" name="user" placeholder="Username">
-                    <input type="password" name="pass" placeholder="Password">
-                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                <form class="form-horizontal" role="form" action="{% url 'shop:login_user' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% if error_message %}
+
+                        <span class="text-danger small">{{ error_message }}</span>
+
+                    {% endif %}
+                    <input type="text" name="username" placeholder="Username" value="{{ username }}">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit" class="login loginmodal-submit" value="Login">
                 </form>
 
                 <div class="login-help">
