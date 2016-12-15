@@ -26,7 +26,7 @@ SECRET_KEY = 'ice*y1j4hc=lgn%x7-1x+eg$zhrvum1wwk5ne-=qjsdnx=8$j@'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+MEDIA_URL = '../MachineGuts_Django/shop/media/'
 
 # Application definition
 
@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
