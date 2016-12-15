@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
-
+from .models import Item
 
 # Create your views here.
 def index(request):
@@ -94,7 +94,8 @@ def validate(username, email, email_confirm, password, password_confirm):
 
 
 def store(request):
-    return render(request, 'shop/store.html')
+    all_items = Item.objects.all()
+    return render(request, 'shop/store.html', {'all_items': all_items})
 
 
 def cart(request):
