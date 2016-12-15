@@ -6,4 +6,4 @@ class Item(models.Model):
     name = models.CharField(max_length=250)
     manufacturer = models.CharField(max_length=250)
     price = models.FloatField()
-    img_url = models.ImageField(max_length=250)
+    img_url = models.FileField()
