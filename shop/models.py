@@ -8,3 +8,6 @@ class Item(models.Model):
     price = models.FloatField()
     img_url = models.CharField(max_length=500)
     sale = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name + ' - ' + self.manufacturer
