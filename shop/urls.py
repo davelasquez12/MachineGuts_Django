@@ -17,10 +17,12 @@ urlpatterns = [
     # 127.0.0.1:8000/cart/
     url(r'^cart/$', views.cart, name='cart'),
 
-    # 127.0.0.1:8000/cart/
+    # 127.0.0.1:8000/deals/
     url(r'^deals/$', views.deals, name='deals'),
 
+    # 127.0.0.1:8000/login/
     url(r'^login/$', views.login_user, name='login_user'),
 
+    # 127.0.0.1:8000/logout/
     url(r'^logout/$', views.logout_user, name='logout_user')
 ]
