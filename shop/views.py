@@ -103,7 +103,8 @@ def cart(request):
     return render(request, 'shop/cart.html')
 
 def deals(request):
-    return render(request, 'shop/deals.html')
+    items = Item.objects.filter(sale=True)
+    return render(request, 'shop/deals.html', {'items': items})
 
 
 

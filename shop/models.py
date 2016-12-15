@@ -7,3 +7,4 @@ class Item(models.Model):
     manufacturer = models.CharField(max_length=250)
     price = models.FloatField()
     img_url = models.CharField(max_length=500)
+    sale = models.BooleanField(default=False)
