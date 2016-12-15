@@ -19,5 +19,8 @@ def store(request):
 def cart(request):
     return render(request, 'shop/cart.html')
 
+def deals(request):
+    return render(request, 'shop/deals.html')
+
 
 

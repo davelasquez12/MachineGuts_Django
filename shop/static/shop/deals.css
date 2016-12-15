@@ -58,3 +58,8 @@ ul {
     width: 100%;
     overflow: scroll;
 }
+
+.panel-heading {
+    text-align: center;
+    font-size: 15px;
+}

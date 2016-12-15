@@ -16,4 +16,7 @@ urlpatterns = [
 
     # 127.0.0.1:8000/cart/
     url(r'^cart/$', views.cart, name='cart'),
+
+    # 127.0.0.1:8000/cart/
+    url(r'^deals/$', views.deals, name='deals'),
 ]
